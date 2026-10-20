@@ -1,10 +1,14 @@
 # Deploying `royalexe.dev`
 
-The site is a static site — no build step. This repo already contains:
+The site is a static site — no build step. The current free deployment is
+**<https://royalexe.github.io/>**. This repo contains:
 
-- `CNAME` → `royalexe.dev`
-- absolute canonical / Open Graph URLs for `https://royalexe.dev/`
+- canonical / Open Graph URLs for `https://royalexe.github.io/`
 - `.nojekyll` so GitHub Pages serves the files as-is
+- no `CNAME` yet, so the free github.io URL works
+
+When the custom domain is ready, add a `CNAME` file containing the domain and
+update the canonical / Open Graph URLs to match.
 
 ## 0. Get the domain
 

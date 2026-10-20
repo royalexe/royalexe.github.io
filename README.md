@@ -15,8 +15,8 @@ python3 -m http.server 8090
 No build step, no dependencies. Drop the folder on any static host
 (GitHub Pages, Netlify, Vercel, Cloudflare Pages) and it works.
 
-**Production URL:** `https://royalexe.dev` — see [`DEPLOY.md`](DEPLOY.md) for
-the domain/DNS checklist.
+**Live URL:** `https://royalexe.github.io/` — custom domain `royalexe.dev`
+is planned. See [`DEPLOY.md`](DEPLOY.md) for the domain/DNS checklist.
 
 ## Files
 
