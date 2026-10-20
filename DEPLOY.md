@@ -1,14 +1,28 @@
 # Deploying `royalexe.dev`
 
-The site is a static site — no build step. The current free deployment is
-**<https://royalexe.github.io/>**. This repo contains:
+The site is a static site — no build step. It is deployed to:
 
-- canonical / Open Graph URLs for `https://royalexe.github.io/`
-- `.nojekyll` so GitHub Pages serves the files as-is
-- no `CNAME` yet, so the free github.io URL works
+- **Cloudflare Pages (primary): <https://royalexe.pages.dev/>**
+- GitHub Pages mirror: <https://royalexe.github.io/>
 
-When the custom domain is ready, add a `CNAME` file containing the domain and
-update the canonical / Open Graph URLs to match.
+The repo contains canonical / Open Graph URLs for
+`https://royalexe.pages.dev/` and `.nojekyll` for GitHub Pages. No `CNAME` is
+present, so the github.io URL works without redirecting.
+
+When a custom domain is ready, add it under **Cloudflare Pages → Custom
+domains**, then update the canonical / Open Graph URLs to match.
+
+## Deploying updates to Cloudflare Pages
+
+From this folder:
+
+```bash
+npx wrangler pages deploy . --project-name royalexe --branch main
+```
+
+If Wrangler asks for authentication, run `npx wrangler login` first. The
+production URL is <https://royalexe.pages.dev/>. Pushing to the GitHub repo
+updates the GitHub Pages mirror separately.
 
 ## 0. Get the domain
 
