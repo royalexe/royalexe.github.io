@@ -65,13 +65,13 @@ Register it with:
 
 ## 1. Create the GitHub repo
 
-Create a **public** repo named `royal-terminal` (or `royalexe.github.io` for
-a root-level github.io URL).
+Create a **public** repo named `royalexe.github.io` — the name is special:
+GitHub publishes it at the root URL `https://royalexe.github.io/`.
 
 From this folder:
 
 ```bash
-git remote add origin git@github.com:royalexe/royal-terminal.git
+git remote add origin https://github.com/royalexe/royalexe.github.io.git
 git push -u origin main
 ```
 
@@ -86,9 +86,9 @@ Repo → **Settings → Pages → Build and deployment**
 - Folder: **/ (root)**
 - Save
 
-Because `CNAME` is present, Pages will use `royalexe.dev` as the custom
-domain. Register the domain first, or the github.io URL may redirect to an
-unregistered domain.
+No `CNAME` file is present yet, so Pages will serve the free
+`https://royalexe.github.io/` URL. Add the custom domain only after it is
+registered and its DNS is ready.
 
 ## 3. DNS records
 
@@ -111,6 +111,15 @@ A/CNAME records for `@` or `www` first, or they will conflict.
 If the DNS panel supports an `ALIAS`/`ANAME` at the apex, `royalexe.github.io`
 also works instead of the A/AAAA records.
 
+Then create a file named `CNAME` in the repo root containing only:
+
+```text
+royalexe.dev
+```
+
+Alternatively, enter `royalexe.dev` under **Settings → Pages → Custom domain**.
+Commit and push the `CNAME` file.
+
 **Cloudflare DNS:** set these records to **DNS only** (grey cloud) while
 GitHub issues the TLS certificate. Do not proxy them at first.
 
@@ -131,7 +140,8 @@ dig +short www.royalexe.dev CNAME
 curl -I https://royalexe.dev
 ```
 
-The site should be live at **https://royalexe.dev**.
+The site should be live at **https://royalexe.github.io/** now, and at
+**https://royalexe.dev** after the custom domain is connected.
 
 ## Optional: use Cloudflare Pages instead
 
