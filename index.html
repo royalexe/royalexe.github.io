@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>royal@sec:~</title>
+<link rel="canonical" href="https://royalexe.dev/" />
+<meta name="description" content="Royal — builder, breaker, terminal dweller. Selected projects, notes and contact." />
+<meta name="theme-color" content="#0b0e14" />
+<meta name="author" content="Royal" />
+<meta property="og:title" content="royal@sec:~" />
+<meta property="og:description" content="Builder, breaker, terminal dweller — projects, notes and contact." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://royalexe.dev/" />
+<meta property="og:site_name" content="royal@sec" />
+<meta property="og:image" content="https://royalexe.dev/assets/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="royal@sec — terminal portfolio" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@royal_govv" />
+<meta name="twitter:site" content="@royal_govv" />
+<meta name="twitter:image" content="https://royalexe.dev/assets/og.jpg" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0e14'/%3E%3Crect x='4' y='4' width='8' height='8' fill='%23f0a050'/%3E%3Cpath d='M15 10l6 6-6 6' stroke='%23e8edf4' stroke-width='3' fill='none'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- blurred wallpaper + CRT overlays -->
+<div class="backdrop" aria-hidden="true"><img src="assets/blackhole.jpg" alt="" /></div>
+<div class="spotlight" id="spotlight" aria-hidden="true"></div>
+<div class="crt" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="host" href="#top" aria-label="Back to top">
+    <span class="host-square" aria-hidden="true"></span>
+    <span class="host-name">royal<span class="host-at">@</span>sec<span class="host-path">:~</span></span>
+  </a>
+
+  <nav class="topnav" aria-label="Primary">
+    <a href="#focus">~/focus</a>
+    <a href="#projects">~/projects</a>
+    <a href="#writeups">~/writeups</a>
+    <a href="#shell">~/shell</a>
+    <a href="#contact">~/contact</a>
+  </nav>
+
+  <div class="topbar-meta">
+    <span class="clock" id="clock">--:--</span>
+    <span class="status"><span class="status-dot" aria-hidden="true"></span>online</span>
+  </div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+</header>
+
+<main class="wrap" id="top">
+
+  <!-- ── PROFILE ─────────────────────────────────────────── -->
+  <section class="window" id="profile" aria-labelledby="profileTitle">
+    <div class="window-bar">
+      <span class="window-title" id="profileTitle">Profile.exe</span>
+      <span class="window-btns" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+    <div class="window-body profile-body">
+
+      <div class="avatar-frame">
+        <span class="avatar-tag" aria-hidden="true">royal.jpg</span>
+        <img class="avatar" src="assets/cat.jpg" width="736" height="736" alt="Black-and-white photo of a cat sitting in front of a computer screen" />
+        <span class="frame-tick tl" aria-hidden="true"></span>
+        <span class="frame-tick tr" aria-hidden="true"></span>
+        <span class="frame-tick bl" aria-hidden="true"></span>
+        <span class="frame-tick br" aria-hidden="true"></span>
+      </div>
+
+      <div class="profile-copy">
+        <p class="term-line"><span class="p-user">royal@sec</span><span class="p-path">:~$</span> <span id="typedCmd">cat bio.txt</span><span class="term-caret" aria-hidden="true">▌</span></p>
+
+        <h1 class="pixel-name">royal<span class="name-cursor" aria-hidden="true"></span></h1>
+
+        <p class="bio">
+          builder, breaker, lifelong tinkerer. i pull systems apart — binaries, web apps,
+          my own dotfiles — to understand how they hold together, then write down what i learn.
+        </p>
+        <p class="bio">
+          currently focused on: <strong>offensive security &amp; tooling</strong>
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-solid" href="https://x.com/royal_govv" target="_blank" rel="me noopener">
+            <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.2 2h6.4l4.4 5.8L18.9 2Zm-1.1 18h1.7L7.1 3.8H5.3L17.8 20Z"/></svg>
+            follow @royal_govv
+          </a>
+          <a class="btn btn-outline" href="https://github.com/royalexe" target="_blank" rel="me noopener">
+            <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            github
+          </a>
+          <a class="btn btn-outline" href="mailto:royal.exe@proton.me?subject=Hello%20Royal">[ send email ]</a>
+          <a class="btn btn-outline" href="#writeups">[ read write-ups ]</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOCUS ───────────────────────────────────────────── -->
+  <section class="window" id="focus" aria-labelledby="focusTitle">
+    <div class="window-bar">
+      <span class="window-title" id="focusTitle">focus.dir</span>
+      <span class="window-btns" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+    <div class="window-body">
+      <h2 class="sec-head"><span>CORE DOMAINS</span></h2>
+
+      <div class="domain-grid">
+        <article class="domain">
+          <h3><span class="idx">[01]</span> OFFENSIVE SECURITY</h3>
+          <p>Recon, web app testing and CTF challenges. Learning by breaking things in lab environments — and documenting every step so the lesson sticks.</p>
+        </article>
+        <article class="domain">
+          <h3><span class="idx">[02]</span> SYSTEMS &amp; TOOLING</h3>
+          <p>Small scripts and CLIs that remove repetitive work. Linux-first, terminal-native, built to still be readable six months from now.</p>
+        </article>
+        <article class="domain">
+          <h3><span class="idx">[03]</span> WEB CRAFT</h3>
+          <p>Interfaces with intent — semantic HTML, fast CSS and just enough JavaScript. Building things that feel good to use, not just to look at.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ────────────────────────────────────────── -->
+  <section class="window" id="projects" aria-labelledby="projectsTitle">
+    <div class="window-bar">
+      <span class="window-title" id="projectsTitle">projects.dir</span>
+      <span class="window-btns" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+    <div class="window-body">
+      <h2 class="sec-head"><span>SELECTED PROJECTS</span></h2>
+
+      <ul class="repo-list">
+        <li>
+          <a href="https://github.com/royalexe?tab=repositories" target="_blank" rel="me noopener">
+            <span class="repo-idx">[01]</span>
+            <span class="repo-main">
+              <strong>recon-kit</strong>
+              <span class="repo-desc">A tidy recon workflow that turns a domain into a readable report. Bash, ffuf, httpx.</span>
+              <span class="repo-tags"><em>#tooling</em><em>#bash</em></span>
+            </span>
+            <span class="repo-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/royalexe?tab=repositories" target="_blank" rel="me noopener">
+            <span class="repo-idx">[02]</span>
+            <span class="repo-main">
+              <strong>dotfiles</strong>
+              <span class="repo-desc">A fast, terminal-first Linux setup — zsh, kitty, i3 and a lot of small opinions.</span>
+              <span class="repo-tags"><em>#linux</em><em>#ricing</em></span>
+            </span>
+            <span class="repo-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/royalexe?tab=repositories" target="_blank" rel="me noopener">
+            <span class="repo-idx">[03]</span>
+            <span class="repo-main">
+              <strong>home-lab</strong>
+              <span class="repo-desc">Self-hosted DNS, dashboards and notes behind a reverse proxy. Built to be broken and rebuilt.</span>
+              <span class="repo-tags"><em>#infra</em><em>#selfhosted</em></span>
+            </span>
+            <span class="repo-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/royalexe?tab=repositories" target="_blank" rel="me noopener">
+            <span class="repo-idx">[04]</span>
+            <span class="repo-main">
+              <strong>ctf-notes</strong>
+              <span class="repo-desc">Write-ups from boxes and challenges, kept public so past-me can help future-me.</span>
+              <span class="repo-tags"><em>#ctf</em><em>#notes</em></span>
+            </span>
+            <span class="repo-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
+      <p class="repo-more"><a href="https://github.com/royalexe?tab=repositories" target="_blank" rel="me noopener">browse all repos on github <span aria-hidden="true">↗</span></a></p>
+    </div>
+  </section>
+
+  <!-- ── WRITEUPS ────────────────────────────────────────── -->
+  <section class="window" id="writeups" aria-labelledby="writeupsTitle">
+    <div class="window-bar">
+      <span class="window-title" id="writeupsTitle">writeups.log</span>
+      <span class="window-btns" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+    <div class="window-body">
+      <h2 class="sec-head"><span>RECENT WRITING</span></h2>
+
+      <div class="log-list">
+        <details class="note">
+          <summary>
+            <time datetime="2026-09-14">2026-09-14</time>
+            <span class="log-title">Unpacking a packed binary with nothing but gdb</span>
+            <span class="log-tag">#reversing</span>
+            <span class="note-plus" aria-hidden="true">+</span>
+          </summary>
+          <p>Most packers give themselves away at the entry point. Break on the first jump, dump the section that lights up, and rebuild it. Notes from doing the whole thing in a terminal.</p>
+        </details>
+        <details class="note">
+          <summary>
+            <time datetime="2026-08-02">2026-08-02</time>
+            <span class="log-title">SSRF is just a confused proxy</span>
+            <span class="log-tag">#websec</span>
+            <span class="note-plus" aria-hidden="true">+</span>
+          </summary>
+          <p>The server trusts its own network more than it trusts you. Map which internal hosts answer, then see how far an open redirect can carry the request.</p>
+        </details>
+        <details class="note">
+          <summary>
+            <time datetime="2026-06-21">2026-06-21</time>
+            <span class="log-title">My terminal setup, three years in</span>
+            <span class="log-tag">#tooling</span>
+            <span class="note-plus" aria-hidden="true">+</span>
+          </summary>
+          <p>zsh, starship and a short list of aliases I actually use. The point was never the rice — it was removing friction between an idea and a command.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SHELL ───────────────────────────────────────────── -->
+  <section class="window" id="shell" aria-labelledby="shellTitle">
+    <div class="window-bar">
+      <span class="window-title" id="shellTitle">shell.exe <span class="bar-status">— interactive</span></span>
+      <span class="window-btns" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+    <div class="window-body shell-body">
+      <div class="terminal" id="terminal">
+        <div class="term-out" id="termOut" role="log" aria-live="polite">
+          <p class="tline"><span class="c-dim">royal@sec interactive shell · v1.0</span></p>
+          <p class="tline"><span class="c-dim">type <span class="c-ok">help</span> for commands · <span class="c-ok">tab</span> autocompletes · press <span class="c-ok">/</span> to focus</span></p>
+          <p class="tline"><span class="c-dim">try:</span> <span class="c-acc">whoami</span> <span class="c-dim">·</span> <span class="c-acc">cat bio.txt</span> <span class="c-dim">·</span> <span class="c-acc">socials</span></p>
+          <p class="tline">&nbsp;</p>
+        </div>
+        <form class="term-form" id="termForm" autocomplete="off">
+          <label class="term-prompt" for="termInput"><span class="p-user">royal@sec</span><span class="p-path">:~$</span></label>
+          <input id="termInput" class="term-input" type="text" spellcheck="false" autocapitalize="off" aria-label="Shell command" placeholder="type a command…" />
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ─────────────────────────────────────────── -->
+  <section class="window" id="contact" aria-labelledby="contactTitle">
+    <div class="window-bar">
+      <span class="window-title" id="contactTitle">contact.dir</span>
+      <span class="window-btns" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+    <div class="window-body">
+      <h2 class="sec-head"><span>OPEN A CHANNEL</span></h2>
+
+      <div class="contact-grid">
+        <div>
+          <p class="contact-label">email</p>
+          <div class="email-row">
+            <a class="email" href="mailto:royal.exe@proton.me?subject=Hello%20Royal">royal.exe@proton.me</a>
+            <button class="copy-btn" id="copyEmail" type="button" data-email="royal.exe@proton.me">[ copy ]</button>
+          </div>
+          <p class="contact-note"><span class="status-dot" aria-hidden="true"></span>open to interesting problems · replies usually within a day</p>
+        </div>
+
+        <ul class="socials">
+          <li><a href="https://github.com/royalexe" target="_blank" rel="me noopener"><span>github</span><span class="social-handle">@royalexe</span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://x.com/royal_govv" target="_blank" rel="me noopener"><span>x / twitter</span><span class="social-handle">@royal_govv</span><span aria-hidden="true">↗</span></a></li>
+          <li><a href="mailto:royal.exe@proton.me?subject=Hello%20Royal"><span>email</span><span class="social-handle">proton.me</span><span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p><span class="p-user">royal@sec</span><span class="p-path">:~$</span> echo "built with too much coffee"</p>
+    <p class="footer-meta">© <span id="year">2026</span> royal ·
+      <a href="https://github.com/royalexe" target="_blank" rel="me noopener">github</a> ·
+      <a href="https://x.com/royal_govv" target="_blank" rel="me noopener">x</a> ·
+      <a href="mailto:royal.exe@proton.me?subject=Hello%20Royal">email</a> ·
+      <a href="#top">cd ~</a> · no cookies, no trackers
+    </p>
+  </footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
