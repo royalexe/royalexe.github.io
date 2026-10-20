@@ -6,17 +6,54 @@ The site is a static site — no build step. This repo already contains:
 - absolute canonical / Open Graph URLs for `https://royalexe.dev/`
 - `.nojekyll` so GitHub Pages serves the files as-is
 
-## 0. Buy the domain (the only step I can't do)
+## 0. Get the domain
 
-`royalexe.dev` appeared unclaimed when checked. Register it with:
+`royalexe.dev` appeared unclaimed when checked.
+
+### Student route — free first year
+
+The **GitHub Student Developer Pack** includes a free one-year domain from
+**Name.com** on select extensions, including `.dev`. You must apply and verify
+your student status yourself — GitHub needs your school email or enrollment
+document, and I can't submit that for you.
+
+1. Sign in to GitHub, enable two-factor authentication if you haven't already,
+   then open **<https://github.com/settings/education/benefits>**.
+2. Under **GitHub Education**, click **Start an application**.
+3. Choose **Student**, select your school, and use your school-issued email if
+   you have one. If you don't, upload one of:
+   - school ID with a current enrollment date
+   - current class schedule
+   - transcript
+   - enrollment/admission verification letter
+4. Submit the application. Approval can be quick, but allow a few days.
+5. After approval, open the **GitHub Education portal** (or the Pack page),
+   find the **Name.com** offer under **Domains**, and click **Get offer**.
+6. Create a Name.com account using the **same email as your GitHub account**.
+   Use a permanent email you control — not a temporary one.
+7. Search for `royalexe.dev`, add it to the cart, and apply the Student Pack
+   offer at checkout. The first year should be free; renewal is paid.
+8. Continue with [Step 1](#1-create-the-github-repo).
+
+Notes:
+
+- The offer covers one standard domain for one year. It does not cover
+  premium/aftermarket names.
+- Name.com may require a payment method for renewal/identity checks. The
+  first-year discount should still apply.
+- If checkout doesn't show the discount, log out of both GitHub and Name.com,
+  sign back in, and reopen the offer from the Pack page. If it still fails,
+  contact Name.com support before paying.
+- If `.dev` isn't eligible when you claim it, use another extension from the
+  offer, or fall back to the paid route below.
+
+### Paid route
+
+Register it with:
 
 - **Cloudflare Registrar** — at-cost, ~$10–11/year, free DNS and WHOIS privacy
 - **Porkbun** — ~$11/year, easy DNS panel
 - **Namecheap** — ~$11 first year
-
-If you are a student, check the **GitHub Student Developer Pack → Name.com**
-offer first. It includes a free domain for a year on select extensions, and
-`.dev` is one of them.
 
 > Confirm the price is standard at checkout. If it is marked "premium",
 > pick `royalsec.dev` or `royalterminal.dev` instead and change `CNAME`,
@@ -51,7 +88,9 @@ unregistered domain.
 
 ## 3. DNS records
 
-At your registrar / DNS host, create:
+At your registrar / DNS host, create the records below. At **Name.com**:
+**My Domains → `royalexe.dev` → Manage DNS**. Remove any default parking
+A/CNAME records for `@` or `www` first, or they will conflict.
 
 | Type | Name | Value |
 | --- | --- | --- |
