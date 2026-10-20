@@ -29,8 +29,7 @@ planned. See [`DEPLOY.md`](DEPLOY.md) for the domain/DNS checklist.
 | `assets/cat.jpg` | Profile photo |
 | `assets/blackhole.jpg` | Full-page background |
 | `assets/og.jpg` | 1200×630 link-preview image |
-| `CNAME` | Custom domain for GitHub Pages |
-| `DEPLOY.md` | Domain + GitHub Pages instructions |
+| `DEPLOY.md` | Cloudflare Pages + custom domain instructions |
 
 ## Make it yours
 
